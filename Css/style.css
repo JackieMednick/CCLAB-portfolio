@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  color: #333;
+  background: linear-gradient(135deg, #4a90e2 0%, #0066cc 100%); 
+  overflow-y: auto; 
+  position: relative;
+  padding-bottom: 50px; 
+}
+
+header {
+  background-color: #003366; 
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #66ccff; 
+  transform: scale(1.1);
+}
+
+
+main {
+  padding: 50px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  color: #66ccff; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-me p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ffffff; 
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 40px;
+  color: #1e3c72; 
+  text-decoration: underline;
+}
+
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+  justify-items: center;
+}
+
+.project-box {
+  padding: 40px 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.project-box a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  margin-top: 10px;
+}
+
+
+.project-box:nth-child(1) {
+  background-color: #1e3c72; 
+}
+
+.project-box:nth-child(2) {
+  background-color: #0077b6; 
+}
+
+.project-box:nth-child(3) {
+  background-color: #006ba6; 
+}
+
+.project-box:nth-child(4) {
+  background-color: #003366; 
+}
+
+.project-box:nth-child(5) {
+  background-color: #66ccff; 
+}
+
+.project-box:nth-child(6) {
+  background-color: #005fa3; 
+}
+
+
+.project-box:hover {
+  transform: translateY(-10px);
+  background-color: #005fa3; 
+}
+
+
+footer {
+  background-color: #003366; 
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.floating-image {
+  position: fixed;
+  width: 120px;
+  z-index: 1000;
+  animation: floatAround 20s ease-in-out infinite;
+}
+
+@keyframes floatAround {
+  0% {
+    left: 10%;
+    top: 10%;
+  }
+  25% {
+    left: calc(100vw - 120px); 
+    top: 10%;
+  }
+  50% {
+    left: calc(100vw - 120px); 
+    top: calc(100vh - 120px); 
+  }
+  75% {
+    left: 10%; 
+    top: calc(100vh - 120px); 
+  }
+  100% {
+    left: 10%;
+    top: 10%; 
+  }
+}
+
+.floating-image:nth-child(1) {
+  animation-duration: 20s;
+  animation-delay: 0s;
+}
+
+.floating-image:nth-child(2) {
+  animation-duration: 22s;
+  animation-delay: 2s;
+}
+
+.floating-image:nth-child(3) {
+  animation-duration: 24s;
+  animation-delay: 4s;
+}
+
+.floating-image:nth-child(4) {
+  animation-duration: 26s;
+  animation-delay: 6s;
+}
+
+.floating-image:nth-child(5) {
+  animation-duration: 28s;
+  animation-delay: 8s;
+}
+
+.floating-image:nth-child(6) {
+  animation-duration: 30s;
+  animation-delay: 10s;
+}
+
+
+.playlist-container {
+  padding: 50px 10%;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-container h2 {
+  font-size: 2.5rem;
+  color: #1e3c72; 
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.playlist {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.playlist li {
+  background-color: #0077b6; 
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.playlist li:hover {
+  background-color: #005fa3; 
+  transform: translateY(-5px);
+}
+
+.playlist li strong {
+  font-weight: bold;
+}
+
+.playlist li:hover strong {
+  color: #66ccff; 
+}
+
+.playlist li:hover:before {
+  opacity: 1;
+}
+
+
+.playlist-container {
+  background: linear-gradient(135deg, #66ccff, #4a90e2); 
+  color: white;
+}
+
+.playlist li:nth-child(odd) {
+  background-color: #005b80; 
+}
+
+.playlist li:nth-child(even) {
+  background-color: #0099cc; 
+}
